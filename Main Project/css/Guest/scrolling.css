@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #317162;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.scroll-to-top:hover {
+    background-color: #ff5a5a;
+    color: rgb(0, 0, 0);
+}
+
+.scroll-to-top.visible {
+    display: block; /* Show the button when scrolled */
+}
