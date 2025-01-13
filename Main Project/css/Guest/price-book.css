@@ -20,7 +20,7 @@
 .booking-part {
     width: 60%;
     height: 100%;
-    background-color: rgba(217, 217, 217, 0.5);
+    background-color: rgba(217, 217, 217, 0.7);
     border-radius: 25px;
     padding: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
@@ -81,6 +81,108 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: rgba(217, 217, 217, 0.5);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5vh;
+}
+
+.booking-form #event-name {
+    padding: 1.5vh 2vh;
+    width: 40vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.booking-form #event-name:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form #event-description {
+    padding: 1.5vh 2vh;
+    width: 40vh;
+    height: 22vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    resize: none;
+    overflow: auto;
+}
+
+.booking-form #event-description:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form .no-attendees-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.booking-form select {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form select:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form #no-of-attendees {
+    padding: 1vh 2vh;
+    width: 25vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+}
+
+.booking-form .event-date-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.booking-form #event-date {
+    padding: 1vh 2vh;
+    width: 25vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form #event-date:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form button {
+    padding: 5px 30px;
+    font-size: 15px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Lustria', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form button:hover {
+    background-color: rgb(158, 31, 31);
+    color: white;
+    cursor: pointer;
 }
 
 .divider {
@@ -117,4 +219,27 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .time {
     color: rgb(18, 18, 153);
+}
+
+.price-booking img {
+    height: auto;
+    width: 30px;
+}
+
+.price-booking footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer .contact-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+footer span {
+    margin: 45px 50px;
 }

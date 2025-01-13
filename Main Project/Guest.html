@@ -79,7 +79,7 @@
             </div>
             <div class="price-booking-content">
                 <div class="booking-part">
-                    <div class="personal-info">
+                    <form action="//" method="post" class="personal-info">
                         <p class="booking-title" id="personal-title">
                             Personal Contact Information
                         </p>
@@ -92,9 +92,25 @@
                         </p>
                         <input class="fields" type="text" name="Secondary Contact Name" id="secondary-contact" placeholder="Secondary Contact Name" required>
                         <input class="fields" type="number" name="secondary-number" id="secondary-number" placeholder="Secondary Phone Number" required>
-                    </div>
+                    </form>
                     <div class="booking-form">
-                        
+                        <p class="booking-title">
+                            Booking Information
+                        </p>
+                        <input type="text" name="event-name" id="event-name" placeholder="Event Name" required>
+                        <textarea name="event-description" id="event-description" placeholder="Event Description" required></textarea>
+                        <div class="no-attendees-dropdown">
+                            No. of Attendees
+                            <select name="no-of-attendees" id="no-of-attendees" required>
+                                <option value="3 - 5 Attendees">3 - 5 Attendees</option>
+                                <option value="6 - 10 Attendees">6 - 10 Attendees</option>
+                                <option value="11 - 15 Attendees">10 - 15 Attendees</option>
+                            </select>
+                        </div>
+                        <div class="event-date-selection">
+                            Date <input type="date" name="event-date" id="event-date" required>
+                        </div>
+                        <button id="book-button" submit>Book</button>
                     </div>
                 </div>
                 <div class="divider">
@@ -108,10 +124,18 @@
                      </p>
                  </div>
             </div>
+            <footer>
+                <span class="contact-details">
+                    <img src="css/icon/Phone.png" alt=""> +639123456789
+                </span>
+                <span class="contact-details">
+                <img src="css/icon/Email.png" alt=""> reserveonthegog@gmail.com
+            </span>
+                <span class="contact-details">
+                    <img src="css/icon/Call.png" alt=""> (032) 234-5678
+                </span>
+            </footer>
         </div>
-        <footer>
-
-        </footer>
     </div>
 
     <div class="about" id="about">
