@@ -13,11 +13,14 @@
     <link rel="stylesheet" href="css/Guest/home.css">
     <link rel="stylesheet" href="css/Guest/calendar.css">
     <link rel="stylesheet" href="css/Guest/about.css">
-    <link rel="stylesheet" href="css/Guest/price.css">
+    <link rel="stylesheet" href="css/Guest/price-book.css">
     <link rel="stylesheet" href="css/Guest/feedback.css">
     <link rel="stylesheet" href="css/Guest/scrolling.css">
 
     <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+</head>
 
 </head>
 <body>
@@ -26,11 +29,13 @@
         <div class="bg-highlight">
             <div class="header">
                 <div class="logo-title">
-                    <img src="css/icon/logo.png" alt="web icon">
+                    <a href="">
+                        <img src="css/icon/logo.png" alt="web icon">
+                    </a>
                     <p class="name">Reserve On The Go</p>
                 </div>
                 <div class="navigations">
-                    <a href="#home" >
+                    <a href="Guest.html" >
                         <p class="nav-text">Home</p>
                     </a>
                     <a href="#calendar">
@@ -38,9 +43,6 @@
                     </a>
                     <a href="#about">
                         <p class="nav-text">About</p>
-                    </a>
-                    <a href="#price">
-                        <p class="nav-text">Price</p>
                     </a>
                     <a href="#feedback">
                         <p class="nav-text">Feedback</p>
@@ -50,9 +52,11 @@
             <div class="main-content">
                 <p class="name-home">Reserve On The Go</p>
                 <p class="tagline">“Book Your Spot, Wherever You Are”</p>
-                <button class="booking-button">
-                    Book Now
-                </button>
+                <a href="#price-booking">
+                    <button class="booking-button">
+                        Book Now
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -68,26 +72,91 @@
         </div>
     </div>
 
-    <div class="about" id="about">
+    <div class="price-booking" id="price-booking">
         <div class="bg-highlight">
+            <div class="title-price-booking">
+                <p>Booking & Price</p>
+            </div>
+            <div class="price-booking-content">
+                <div class="booking-part">
+                    
+                </div>
+                <div class="divider">
 
+                </div>
+                <div class="pricing-part">
+                    <p>
+                     For only <b class="price">₱ 2,500</b> per day, you can enjoy our venue from <b class="time">8 AM to 5 PM</b>!
+                     <br><br>
+                     The package includes a speaker, usage of water, and a peaceful space perfect for hangouts, small events, get-togethers with friends, family, and loved ones.
+                     </p>
+                 </div>
+            </div>
         </div>
+        <footer>
+
+        </footer>
     </div>
 
-    <div class="price" id="price">
+    <div class="about" id="about">
         <div class="bg-highlight">
-            
+            <div class="title-about">
+                <p>About Us</p>
+            </div>
+            <div class="about-content">
+                <div class="picture-part">
+
+                </div>
+                <div class="divider">
+                    <!-- This dic is used as a divider for price and booking -->
+                </div>  
+                <div class="text-part">
+                    <p>
+                        <b>Reserve On The Go</b> is your perfect venue for hosting unforgettable parties and celebrations. Whether you're planning a birthday party, small wedding celebration, or small event, our space offers the ideal setting for any occasion.
+                        <br><br>
+                        <b>Located in Justineville, Bacoor ,Cavite</b>, we make it easy to reserve our perfect spot for your next event. 
+                        <br><br>
+                        For inquiries or bookings, email us at <b>reserveotg@gmail.com</b>.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="feedback" id="feedback">
         <div class="bg-highlight">
-            
+            <div class="title-feedback">
+                <p>Feedback</p>
+            </div>
+            <div class="feedback-content">
+                <form action="" class="feedback-part">
+                    <input type="email" name="email" id="email-field" placeholder="Email" required>
+                    <textarea name="message" id="message-field" placeholder="Message" required></textarea>
+                    <button onclick="//"><i class="fa-regular fa-paper-plane"></i>&nbsp;&nbsp;Send</button>
+                </form>
+                <div class="divider">
+
+                </div>
+                <div class="text-part-feedback">
+                    <p>At <b>Reservation On The Go</b>, we truly value your feedback! Our goal is to make our service more accessible, efficient, and tailored to meet your needs.
+                        <br><br>
+                        By sharing your thoughts, you help us improve and deliver the best experience possible for event management.
+                        <br><br>
+                        We are committed to becoming your trusted partner for seamless and reliable service.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <img src="css/icon/logo.png" alt=""> &nbsp;
+                <span class="footer-text">
+                    Reserve On The Go All Right Reserve 2024
+                </span>
         </div>
     </div>
 
     <!-- Scroll to top button -->
-    <button class="scroll-to-top" onclick="scrollToTop()">Go to Home</button>
+    <button class="scroll-to-top" onclick="scrollToTop()"><i class="fa-solid fa-up-long"></i></button>
 
     <!-- Scripts-->
      <script src="js/guest-scrolling.js"></script>

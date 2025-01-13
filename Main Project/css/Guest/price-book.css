@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+.title-price-booking {
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+}
+
+.price-booking {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/paper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.booking-part {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(217, 217, 217, 0.5);
+    border-radius: 25px;
+}
+
+.divider {
+    width: 2%;
+    height: 100%;
+}
+
+.price-booking-content {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 65%;
+}
+
+.pricing-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38%;
+    height: 100%;
+}
+
+.pricing-part p {
+    font-family: 'Lustria', serif;
+    font-size: 31px;
+}
+
+.price {
+    color: rgb(179, 32, 32);
+}
+
+.time {
+    color: rgb(18, 18, 153);
+}
