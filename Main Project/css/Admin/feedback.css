@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+.feedback-bg {
+    height: 100%;
+    width: 85%;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.header-part {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.header-part p {
+    margin-left: 25px;
+    font-family: 'Lustria', serif;
+    font-size: 20px;
+}
+
+.searchbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.searchbar i:first-child {
+    margin-right: 15px;
+}
+
+.searchbar i:first-child:hover {
+    color: red;
+}
+
+.searchbar input {
+    padding: 7px 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Lustria', serif;
+}
+
+.searchbar input:focus {
+    outline: none;
+    border: red 1px solid;
+}
+
+.searchbar i:last-child {
+    margin-left: 5px;
+}
+
+.table {
+    width: 80%;
+    height: 90%;
+    border: 1x solid black;
+}
