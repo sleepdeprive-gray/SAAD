@@ -36,7 +36,7 @@
                 <button class="submit">Submit</button>
             </form>
             <br><br><br>
-            <p class="back-to-login">If problem persist, <a href="login.html">Contact Developer</a>.</p>
+            <p class="back-to-login">If problem persist, <a href="login.php">Contact Developer</a>.</p>
         </div>
     </div>
 

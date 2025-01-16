@@ -35,7 +35,7 @@
             <button class="submit">Submit</button>
             </form>
             <br><br><br><br><br><br>
-            <p class="back-to-login">Already remember the password? <a href="change-password.html">Click Here</a>.</p>
+            <p class="back-to-login">Already remember the password? <a href="change-password.php">Click Here</a>.</p>
         </div>
     </div>
 

@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="css/Guest/feedback.css">
     <link rel="stylesheet" href="css/Guest/scrolling.css">
 
+    <?php
+    ?>
+
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     
-</head>
-
 </head>
 <body>
 
@@ -29,7 +30,7 @@
         <div class="bg-highlight">
             <div class="header">
                 <div class="logo-title">
-                    <a href="">
+                    <a href="Login/login.html">
                         <img src="css/icon/logo.png" alt="web icon">
                     </a>
                     <p class="name">Reserve On The Go</p>
@@ -129,7 +130,7 @@
                     <img src="css/icon/Phone.png" alt=""> +639123456789
                 </span>
                 <span class="contact-details">
-                <img src="css/icon/Email.png" alt=""> reserveonthegog@gmail.com
+                <img src="css/icon/Email.png" alt=""> reserveonthego@gmail.com
             </span>
                 <span class="contact-details">
                     <img src="css/icon/Call.png" alt=""> (032) 234-5678

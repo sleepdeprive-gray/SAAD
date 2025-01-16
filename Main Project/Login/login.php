@@ -34,7 +34,7 @@
             </form>
             <br><br><br><br>
             <p class="forgot-pass">
-                Forgot Password? <a href="forgot-password.html">Click Here</a>.
+                Forgot Password? <a href="forgot-password.php">Click Here</a>.
             </p>
         </div>
     </div>

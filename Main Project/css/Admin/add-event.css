@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+.add-event-bg {
+    height: 97%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reservations {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reservation-container {
+    width: 90%;
+    height: 100%;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.title {
+    font-family: 'Lustria', serif;
+    font-size: 22.5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.events {
+    width: 85%;
+    height: 85%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.events-listed {
+    width: 100%;
+    height: 13%;
+    background-color: #949494;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5%;
+    font-family: 'Lustria', serif;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.view-button {
+    width: 25%;
+    height: 75%;
+    font-family: 'Lustria', serif;
+    background-color: #317162;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+
+.view-button:hover {
+    background-color: #ff5a5a;
+    color: rgb(0, 0, 0);
+}
+
+.add-event {
+    height: 100%;
+    width: 60%;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: row;
+    position: relative; /* Enable absolute positioning for the button */
+}
+
+.booking-part {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(217, 217, 217, 0.7);
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.personal-info {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5%;
+    width: 35%;
+    height: 91.5%;
+    gap: 15px;
+    padding: 20px;
+
+}
+
+#personal-title {
+    margin-top: -10px;
+}
+
+.fields {
+    padding: 1.5vh 2vh;
+    width: 30vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.fields:focus {
+    border-color: red;
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.booking-title {
+    margin-bottom: -5px;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.booking-form {
+    margin-top: 1.75%;
+    width: 60%;
+    height: 100%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5vh;
+}
+
+.booking-form #event-name {
+    padding: 1.5vh 2vh;
+    width: 40vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.booking-form #event-name:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form #event-description {
+    padding: 1.5vh 2vh;
+    width: 40vh;
+    height: 22vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    resize: none;
+    overflow: auto;
+}
+
+.booking-form #event-description:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form .no-attendees-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.booking-form select {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form select:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+.booking-form #no-of-attendees {
+    padding: 1vh 2vh;
+    width: 25vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+}
+
+.booking-form .event-date-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.booking-form #event-date {
+    padding: 1vh 2vh;
+    width: 25vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lustria', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form #event-date:focus {
+    outline: 1px solid rgb(229, 23, 23);
+}
+
+/* Center the button */
+.add-event button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button in the middle */
+    padding: 10px 30px;
+    font-size: 15px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Lustria', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #317162; /* Add button background color */
+    color: white; /* Add button text color */
+    z-index: 10; /* Ensure it stays above other content */
+}
+
+.add-event button:hover {
+    background-color: rgb(158, 31, 31);
+    color: white;
+    cursor: pointer;
+}

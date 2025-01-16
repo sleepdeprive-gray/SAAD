@@ -7,6 +7,9 @@
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-part {
@@ -22,6 +25,7 @@
     margin-left: 25px;
     font-family: 'Lustria', serif;
     font-size: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .searchbar a {
@@ -31,6 +35,7 @@
 
 .searchbar i:first-child {
     margin-right: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .searchbar i:first-child:hover {
@@ -39,10 +44,12 @@
 
 .searchbar input {
     padding: 7px 5px;
-    width: 200px;
+    width: 250px;
     border-radius: 5px;
     border: none;
     font-family: 'Lustria', serif;
+    font-size: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .searchbar input:focus {
@@ -52,10 +59,201 @@
 
 .searchbar i:last-child {
     margin-left: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .table {
-    width: 80%;
+    width: 95%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 5px;
+    scrollbar-width: none;
+    border-bottom: 5px;
+}
+
+table {
+    width: 100%;
     height: 90%;
-    border: 1x solid black;
+    font-family: 'Lustria', serif;
+    border-collapse: collapse;
+}
+
+thead {
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    position: sticky; /* Keep the header fixed */
+    top: 0; /* Stick to the top of the container */
+    background-color: rgb(168, 50, 50); /* Background for better visibility */
+    z-index: 10; /* Ensure it stays above table content */
+    border: 1px solid black;
+    font-family: 'Lustria', serif;
+}
+
+table th, tr td {
+    color: white;
+    width: 28%;
+    border: 1px solid black;
+    padding-left: 15px;
+    font-family: 'Lustria', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+table th:nth-child(3) {
+    width: 19%;
+    text-align: left;
+}
+
+table th:nth-child(4) {
+    width: 10%;
+    text-align: left;
+}
+
+th:nth-child(5) {
+    width: 15%;
+    text-align: center;
+}
+
+tbody tr {
+    height: 50px;
+}
+
+table td:nth-child(3)  {
+    width: 19%;
+    text-align: left;
+}
+
+table td:nth-child(4)  {
+    width: 10%;
+    text-align: left;
+}
+
+td:nth-child(5) {
+    width: 15%;
+    margin-top: -10px;
+    text-align: center;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #4A4A4A; /* Light gray for odd rows */    
+}
+
+table tr:nth-child(even) td {
+    background-color: #898989; /* White for even rows */
+}
+
+.view-button {
+    padding: 7px 25px;
+    font-family: 'Lustria', serif;
+    background-color: #317162;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    margin-top: -15px;
+    margin-top: 0px;
+}
+
+.view-button:hover {
+    background-color: #ff5a5a;
+    color: rgb(0, 0, 0);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    font-family: 'Lustria', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px; /* Adjust height to fit content */
+    border-radius: 15px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+    font-family: 'Lustria', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.modal-input {
+    z-index: 1000;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Lustria', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    font-family: 'Lustria', serif;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #317162;
+    color: white;
+    border: none;
+    font-family: 'Lustria', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-self: flex-end; /* Align the button to the right */
+}
+
+.modal-content button:hover {
+    background-color: #ff5a5a;
+    color: rgb(0, 0, 0);
 }
