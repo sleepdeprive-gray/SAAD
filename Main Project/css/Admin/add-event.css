@@ -148,7 +148,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .booking-title {
     margin-bottom: -5px;
-
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-weight: 500;
 }

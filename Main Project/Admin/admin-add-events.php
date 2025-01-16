@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../css/icon/logo.png" type="image/x-icon">
 
     <!-- CSS Link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/Admin/layout.css">
     <link rel="stylesheet" href="../css/Admin/add-event.css">
 

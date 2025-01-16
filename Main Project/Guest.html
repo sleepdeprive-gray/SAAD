@@ -7,7 +7,10 @@
     <title>Reserve On The Go</title>
 
     <!-- Webpage Icon -->
-    <link rel="shortcut icon" href="icon/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="css/icon/logo.png" type="image/x-icon">
+
+    <!-- CSS for full calender -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/Guest/home.css">
@@ -17,8 +20,11 @@
     <link rel="stylesheet" href="css/Guest/feedback.css">
     <link rel="stylesheet" href="css/Guest/scrolling.css">
 
-    <?php
-    ?>
+    <!-- Scripts Links -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
 
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -26,7 +32,7 @@
 </head>
 <body>
 
-    <div class="home" id="home">
+    <section class="home" id="home">
         <div class="bg-highlight">
             <div class="header">
                 <div class="logo-title">
@@ -39,7 +45,7 @@
                     <a href="Guest.html" >
                         <p class="nav-text">Home</p>
                     </a>
-                    <a href="#calendar">
+                    <a href="#calendar-home">
                         <p class="nav-text">Calendar</p>
                     </a>
                     <a href="#about">
@@ -60,20 +66,20 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="calendar" id="calendar">
+    <section class="calendar" id="calendar-home">
         <div class="bg-highlight">
             <div class="title-calendar">
                 <p>Calendar</p>
             </div>
-            <div class="calendar-content">
+            <div class="calendar-content" id="calendar">
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="price-booking" id="price-booking">
+    <section class="price-booking" id="price-booking">
         <div class="bg-highlight">
             <div class="title-price-booking">
                 <p>Booking & Price</p>
@@ -115,7 +121,6 @@
                     </div>
                 </div>
                 <div class="divider">
-
                 </div>
                 <div class="pricing-part">
                     <p>
@@ -137,9 +142,9 @@
                 </span>
             </footer>
         </div>
-    </div>
+    </section>
 
-    <div class="about" id="about">
+    <section class="about" id="about">
         <div class="bg-highlight">
             <div class="title-about">
                 <p>About Us</p>
@@ -162,9 +167,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="feedback" id="feedback">
+    <section class="feedback" id="feedback">
         <div class="bg-highlight">
             <div class="title-feedback">
                 <p>Feedback</p>
@@ -194,13 +199,15 @@
                     Reserve On The Go All Right Reserve 2024
                 </span>
         </div>
-    </div>
+    </section>
 
     <!-- Scroll to top button -->
     <button class="scroll-to-top" onclick="scrollToTop()"><i class="fa-solid fa-up-long"></i></button>
-
-    <!-- Scripts-->
-     <script src="js/guest-scrolling.js"></script>
     
 </body>
+
+    <!-- Links -->
+    <script src="js/Guest/guest-scrolling.js"></script>
+    <script src="js/Guest/event-show.js"></script>
+
 </html>

@@ -24,10 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script src="../js/Admin/event-show.js"></script>
 
 </head>
 <body>
-
     <div class="bg-highlight">    
         <header>
                 <div class="header-title">
@@ -86,100 +86,32 @@
                     </nav>
                 </div>
             </div>
-
             <!-- Main Content -->
-             <div class="main-content-part">
+            <div class="main-content-part">
                 <div class="calendar" id="calendar">
                     
                 </div>
              </div>
-
         </div>
     </div>
+    <div id="event_details_modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <span class="custom-modal-close" onclick="closeModal()">&times;</span>
+            <h3>Event Details</h3>
+            <p><strong>Event ID:</strong> <span id="modal_event_id"></span></p>
+            <p><strong>Title:</strong> <span id="modal_event_title"></span></p>
+            <p><strong>Description:</strong> <span id="modal_event_desc"></span></p>
+            <p><strong>No. of Attendees:</strong> <span id="modal_no_of_attendees"></span></p>
+            <hr>
+            <h4>Contact Information</h4>
+            <p><strong>Client Name:</strong> <span id="modal_client_name"></span></p>
+            <p><strong>Phone Number:</strong> <span id="modal_phone_num"></span></p>
+            <p><strong>Landline Number:</strong> <span id="modal_landline_num"></span></p>
+            <p><strong>Email:</strong> <span id="modal_email"></span></p>
+            <p><strong>Secondary Contact Name:</strong> <span id="modal_sec_contact_name"></span></p>
+            <p><strong>Secondary Phone Number:</strong> <span id="modal_sec_phone_num"></span></p>
+        </div>
+    </div>
+</div>
 </body>
-<script>
-        $(document).ready(function() {
-            display_events();
-        }); //end document.ready block
-
-        function display_events() {
-            var events = new Array();
-        $.ajax({
-            url: '../process/display_event.php',  
-            dataType: 'json',
-            success: function (response) {
-                
-            var result=response.data;
-            $.each(result, function (i, item) {
-                events.push({
-                    event_id: result[i].event_id,
-                    title: result[i].title,
-                    start: result[i].start,
-                    end: result[i].end,
-                    color: result[i].color,
-                    url: result[i].url
-                }); 	
-            })
-            var calendar = $('#calendar').fullCalendar({
-                defaultView: 'month',
-                timeZone: 'local',
-                editable: true,
-                selectable: true,
-                selectHelper: true,
-                select: function(start, end) {
-                        alert(start);
-                        alert(end);
-                        $('#event_start_date').val(moment(start).format('YYYY-MM-DD'));
-                        $('#event_end_date').val(moment(end).format('YYYY-MM-DD'));
-                        $('#event_entry_modal').modal('show');
-                    },
-                events: events,
-                eventRender: function(event, element, view) { 
-                    element.bind('click', function() {
-                            alert(event.event_id);
-                        });
-                }
-                }); //end fullCalendar block	
-            },//end success block
-            error: function (xhr, status) {
-            alert(response.msg);
-            }
-            });//end ajax block	
-        }
-
-        function save_event()
-        {
-        var event_name=$("#event_name").val();
-        var event_start_date=$("#event_start_date").val();
-        var event_end_date=$("#event_end_date").val();
-        if(event_name=="" || event_start_date=="" || event_end_date=="")
-        {
-        alert("Please enter all required details.");
-        return false;
-        }
-        $.ajax({
-        url:"../process/save_event.php",
-        type:"POST",
-        dataType: 'json',
-        data: {event_name:event_name,event_start_date:event_start_date,event_end_date:event_end_date},
-        success:function(response){
-        $('#event_entry_modal').modal('hide');  
-        if(response.status == true)
-        {
-            alert(response.msg);
-            location.reload();
-        }
-        else
-        {
-            alert(response.msg);
-        }
-        },
-        error: function (xhr, status) {
-        console.log('ajax error = ' + xhr.statusText);
-        alert(response.msg);
-        }
-        });    
-        return false;
-        }
-    </script>
 </html>
